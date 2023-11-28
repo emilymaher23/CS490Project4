@@ -81,6 +81,7 @@ def process_global(time, rdd):
         fd.write(' '.join( str(ele) for ele in python_list ))
         fd.write('\n')
         fd.close()
+        return python_list
     except:
         e1 = sys.exc_info()[0]
         e2 = sys.exc_info()[1]
