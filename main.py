@@ -23,6 +23,8 @@ def aggregate_global_topk(new_values, global_topk):
     ########### TODO Start #####################################
 
 
+    # convert the global_topk rdd to a list
+    global_topk = global_topk.map(list)
     # Combine new_values and global_topk by concatenating the lists
     combined_values = new_values + global_topk
     # Take the top 10 values
