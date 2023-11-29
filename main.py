@@ -22,9 +22,13 @@ def aggregate_global_topk(new_values, global_topk):
     #       return values format should also be a integer list
     ########### TODO Start #####################################
 
-
+        
+    # make sure a list exists for global_topk - if it is "None", make it an empty list
+    if global_topk is None:
+        global_topk = []
     # convert the global_topk rdd to a list
-    global_topk = global_topk.map(list)
+    #global_topk = global_topk.map(list)
+    
     # Combine new_values and global_topk by concatenating the lists
     combined_values = new_values + global_topk
     # Take the top 10 values
