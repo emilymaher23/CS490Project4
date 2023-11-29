@@ -34,6 +34,10 @@ def aggregate_global_topk(new_values, global_topk):
     # Take the top 10 values
     global_topk = sorted(combined_values, reverse=True)[:10]
 
+    # print the global top k
+    #print("agg_g_topk: ")
+    #print(global_topk)
+
 
     ########### TODO End #####################################
     return global_topk
@@ -111,6 +115,9 @@ def process_window(time, rdd):
 
         # make the list into python_list 
         python_list = largest_10
+
+        # print python_list for testing
+        print(python_list)
 
         ########### TODO End ######################################
         fd = open("./result/task1.txt", "a")
