@@ -83,6 +83,9 @@ def process_global(time, rdd):
         # set the integers to python_list
         python_list = top_10_integers
 
+        # print the top 10 for testing
+        print(python_list)
+
 
 
         ########### TODO End ######################################
@@ -117,7 +120,7 @@ def process_window(time, rdd):
         python_list = largest_10
 
         # print python_list for testing
-        print(python_list)
+        #print(python_list)
 
         ########### TODO End ######################################
         fd = open("./result/task1.txt", "a")
