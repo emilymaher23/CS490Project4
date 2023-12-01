@@ -30,13 +30,13 @@ def aggregate_global_topk(new_values, global_topk):
     #global_topk = global_topk.map(list)
     
     # Combine new_values and global_topk by concatenating the lists
-    combined_values = new_values + global_topk
+    combined_values = global_topk + new_values
     # Take the top 10 values
     global_topk = sorted(combined_values, reverse=True)[:10]
 
     # print the global top k
     #print("agg_g_topk: ")
-    #print(global_topk)
+    print(global_topk)
 
 
     ########### TODO End #####################################
@@ -84,7 +84,7 @@ def process_global(time, rdd):
         python_list = top_10_integers
 
         # print the top 10 for testing
-        print(python_list)
+        #print(python_list)
 
 
 
