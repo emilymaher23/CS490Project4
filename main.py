@@ -81,7 +81,7 @@ def process_global(time, rdd):
         top_10_integers = sorted_integers.take(10)
 
         # set the integers to python_list
-        python_list = python_list + top_10_integers
+        python_list = top_10_integers[0]
 
         # print the top 10 for testing
         print(python_list)
